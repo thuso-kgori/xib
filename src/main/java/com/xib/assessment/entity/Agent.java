@@ -3,6 +3,7 @@ package com.xib.assessment.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
@@ -16,6 +17,7 @@ public class Agent implements Serializable {
     private String idNumber;
 
     @ManyToOne
+    @JoinColumn(name = "team_id", referencedColumnName = "id")
     private Team team;
 
     public Long getId() {

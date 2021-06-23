@@ -2,16 +2,13 @@ package com.xib.assessment.service;
 
 import com.xib.assessment.entity.Agent;
 import com.xib.assessment.entity.Team;
-import com.xib.assessment.repo.AgentRepository;
 import com.xib.assessment.repo.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -90,6 +87,6 @@ public class TeamService {
     }
 
     public List<Team> getEmptyTeams(){
-        return teamRepository.findTeamsByAgents_Empty();
+        return teamRepository.findTeamsByAgentsIsNull();
     }
 }

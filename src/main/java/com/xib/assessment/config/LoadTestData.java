@@ -1,4 +1,4 @@
-package com.xib.assessment;
+package com.xib.assessment.config;
 
 import com.xib.assessment.entity.Agent;
 import com.xib.assessment.entity.Manager;
